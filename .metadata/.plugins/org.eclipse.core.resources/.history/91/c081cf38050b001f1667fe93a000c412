@@ -1,0 +1,9 @@
+package com.MrBoo.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.MrBoo.TestModel.TestModels;
+
+public interface TestRepository extends JpaRepository<TestModels, Integer>{
+
+}

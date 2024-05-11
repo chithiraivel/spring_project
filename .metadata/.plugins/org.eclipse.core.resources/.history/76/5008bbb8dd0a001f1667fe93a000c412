@@ -1,0 +1,5 @@
+package com.MrBoo.repository;
+
+public interface TestRepository {
+
+}

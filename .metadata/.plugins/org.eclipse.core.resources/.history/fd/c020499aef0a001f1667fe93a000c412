@@ -1,0 +1,28 @@
+package com.MrBoo.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.MrBoo.TestModel.TestModels;
+import com.MrBoo.repository.TestRepository;
+
+@RestController
+public class TestController {
+
+	@Autowired
+	private TestRepository testRepository;
+	
+	@GetMapping("/test")
+	public String getName() {
+		return "JUst sAMPLE  STRING";
+	}
+	
+	@PostMapping("/api/task")
+	public TestModels postName(@RequestBody TestModels test) {
+		testRepository.save(test);
+		return test;
+	}
+}
